@@ -1,6 +1,6 @@
 const initialState = {
     //pueden haber varios key: value acá, son todos los valores iniciales
-
+    colorPalette:[[70,70,70], [112,112,112], [200,200,200]],
   }
   
   // Use the initialState as a default value
@@ -8,6 +8,13 @@ const initialState = {
     // The reducer normally looks at the action type field to decide what happens
     switch (action.type) {
       // Do something here based on the different types of actions
+      case 'colors/setPalette':{
+        return {
+          ...state, 
+          colorPalette:[action.payload.result],
+
+        }
+      }
       default:
         // If this reducer doesn't recognize the action type, or doesn't
         // care about this specific action, return the existing state unchanged
