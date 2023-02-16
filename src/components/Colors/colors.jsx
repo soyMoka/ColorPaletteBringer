@@ -2,6 +2,7 @@ import './colorsStyle.css'
 
 function valueToHex(c) {
     var hex = c.toString(16);
+    if (hex.length === 1){return "0" + hex} 
     return hex
   }
   
