@@ -1,6 +1,6 @@
 const initialState = {
     //pueden haber varios key: value acá, son todos los valores iniciales
-    colorPalette:[[70,70,70], [112,112,112], [200,200,200]],
+    "colorPalette":[[[70,70,70], [112,112,112], [200,200,200]]],
   }
   
   // Use the initialState as a default value
@@ -11,7 +11,7 @@ const initialState = {
       case 'colors/setPalette':{
         return {
           ...state, 
-          colorPalette:[action.payload.result],
+          "colorPalette":[action.payload.result],
 
         }
       }

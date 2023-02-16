@@ -13,6 +13,7 @@ function valueToHex(c) {
 
 
 const ColorPalette = ({color})=>{
+    console.log('Tarjeta info', {color});
     const style = {
         backgroundColor: `rgb(${color[0]}, ${color[1]}, ${color[2]})`,
     }
@@ -28,12 +29,12 @@ const ColorPalette = ({color})=>{
 }
 
 export const ListPalette = ({colors})=>{
+    console.log('map info', {colors});
 
     
     return (
         <section className="colors-container">
-
-            {colors.map((color, i) => {
+            {colors[0].map((color, i) => {
                 return(
                     <ColorPalette 
                         key={i+color}
